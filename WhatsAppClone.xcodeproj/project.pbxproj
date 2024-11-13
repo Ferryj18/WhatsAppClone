@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2950E5D3A9DD94ECBBC7CC4C /* Pods_WhatsAppClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E0AF6ED48CC6999BBDC86B /* Pods_WhatsAppClone.framework */; };
+		2C4A5890DFD070CF61E76202 /* Pods_WhatsAppCloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF143F889F1AB3EDCE168916 /* Pods_WhatsAppCloneTests.framework */; };
+		33F1BB101D81E96FB8633CD2 /* Pods_WhatsAppClone_WhatsAppCloneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0112DBDC20361C62F36743C /* Pods_WhatsAppClone_WhatsAppCloneUITests.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		4A26D0542CE4FA19001D5703 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,9 +30,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08E0AF6ED48CC6999BBDC86B /* Pods_WhatsAppClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsAppClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3713CD5DA7B859808B2A3B1B /* Pods-WhatsAppCloneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsAppCloneTests.release.xcconfig"; path = "Target Support Files/Pods-WhatsAppCloneTests/Pods-WhatsAppCloneTests.release.xcconfig"; sourceTree = "<group>"; };
 		4A26D03D2CE4FA17001D5703 /* WhatsAppClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsAppClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A26D0532CE4FA19001D5703 /* WhatsAppCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhatsAppCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A26D05D2CE4FA19001D5703 /* WhatsAppCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhatsAppCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B98F2F11EB0B6890EB1A6171 /* Pods-WhatsAppClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsAppClone.debug.xcconfig"; path = "Target Support Files/Pods-WhatsAppClone/Pods-WhatsAppClone.debug.xcconfig"; sourceTree = "<group>"; };
+		BF143F889F1AB3EDCE168916 /* Pods_WhatsAppCloneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsAppCloneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFE52D27FD3A2347F73907C8 /* Pods-WhatsAppCloneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsAppCloneTests.debug.xcconfig"; path = "Target Support Files/Pods-WhatsAppCloneTests/Pods-WhatsAppCloneTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C69C0D4EE9DE25D72DCF0E88 /* Pods-WhatsAppClone-WhatsAppCloneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsAppClone-WhatsAppCloneUITests.debug.xcconfig"; path = "Target Support Files/Pods-WhatsAppClone-WhatsAppCloneUITests/Pods-WhatsAppClone-WhatsAppCloneUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D94DA8B8907480C9A32078AE /* Pods-WhatsAppClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsAppClone.release.xcconfig"; path = "Target Support Files/Pods-WhatsAppClone/Pods-WhatsAppClone.release.xcconfig"; sourceTree = "<group>"; };
+		E0112DBDC20361C62F36743C /* Pods_WhatsAppClone_WhatsAppCloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsAppClone_WhatsAppCloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE680AF68989991CB657583C /* Pods-WhatsAppClone-WhatsAppCloneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsAppClone-WhatsAppCloneUITests.release.xcconfig"; path = "Target Support Files/Pods-WhatsAppClone-WhatsAppCloneUITests/Pods-WhatsAppClone-WhatsAppCloneUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -50,11 +65,15 @@
 		};
 		4A26D0562CE4FA19001D5703 /* WhatsAppCloneTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = WhatsAppCloneTests;
 			sourceTree = "<group>";
 		};
 		4A26D0602CE4FA19001D5703 /* WhatsAppCloneUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = WhatsAppCloneUITests;
 			sourceTree = "<group>";
 		};
@@ -65,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2950E5D3A9DD94ECBBC7CC4C /* Pods_WhatsAppClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C4A5890DFD070CF61E76202 /* Pods_WhatsAppCloneTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,12 +100,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33F1BB101D81E96FB8633CD2 /* Pods_WhatsAppClone_WhatsAppCloneUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D041F8697D300198C253BB2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B98F2F11EB0B6890EB1A6171 /* Pods-WhatsAppClone.debug.xcconfig */,
+				D94DA8B8907480C9A32078AE /* Pods-WhatsAppClone.release.xcconfig */,
+				C69C0D4EE9DE25D72DCF0E88 /* Pods-WhatsAppClone-WhatsAppCloneUITests.debug.xcconfig */,
+				EE680AF68989991CB657583C /* Pods-WhatsAppClone-WhatsAppCloneUITests.release.xcconfig */,
+				BFE52D27FD3A2347F73907C8 /* Pods-WhatsAppCloneTests.debug.xcconfig */,
+				3713CD5DA7B859808B2A3B1B /* Pods-WhatsAppCloneTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4A26D0342CE4FA17001D5703 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +128,8 @@
 				4A26D0562CE4FA19001D5703 /* WhatsAppCloneTests */,
 				4A26D0602CE4FA19001D5703 /* WhatsAppCloneUITests */,
 				4A26D03E2CE4FA17001D5703 /* Products */,
+				1D041F8697D300198C253BB2 /* Pods */,
+				C4396ED0A90AC989265E2A66 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +143,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C4396ED0A90AC989265E2A66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08E0AF6ED48CC6999BBDC86B /* Pods_WhatsAppClone.framework */,
+				E0112DBDC20361C62F36743C /* Pods_WhatsAppClone_WhatsAppCloneUITests.framework */,
+				BF143F889F1AB3EDCE168916 /* Pods_WhatsAppCloneTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,9 +160,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A26D0662CE4FA19001D5703 /* Build configuration list for PBXNativeTarget "WhatsAppClone" */;
 			buildPhases = (
+				B67865C3519B02CDF307192C /* [CP] Check Pods Manifest.lock */,
 				4A26D0392CE4FA17001D5703 /* Sources */,
 				4A26D03A2CE4FA17001D5703 /* Frameworks */,
 				4A26D03B2CE4FA17001D5703 /* Resources */,
+				D9C034E475258F9D860C3ADE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,8 +174,6 @@
 				4A26D03F2CE4FA17001D5703 /* WhatsAppClone */,
 			);
 			name = WhatsAppClone;
-			packageProductDependencies = (
-			);
 			productName = WhatsAppClone;
 			productReference = 4A26D03D2CE4FA17001D5703 /* WhatsAppClone.app */;
 			productType = "com.apple.product-type.application";
@@ -134,6 +182,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A26D06B2CE4FA19001D5703 /* Build configuration list for PBXNativeTarget "WhatsAppCloneTests" */;
 			buildPhases = (
+				68D75182D51BF8AC666181F7 /* [CP] Check Pods Manifest.lock */,
 				4A26D04F2CE4FA19001D5703 /* Sources */,
 				4A26D0502CE4FA19001D5703 /* Frameworks */,
 				4A26D0512CE4FA19001D5703 /* Resources */,
@@ -147,8 +196,6 @@
 				4A26D0562CE4FA19001D5703 /* WhatsAppCloneTests */,
 			);
 			name = WhatsAppCloneTests;
-			packageProductDependencies = (
-			);
 			productName = WhatsAppCloneTests;
 			productReference = 4A26D0532CE4FA19001D5703 /* WhatsAppCloneTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -157,9 +204,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A26D06E2CE4FA19001D5703 /* Build configuration list for PBXNativeTarget "WhatsAppCloneUITests" */;
 			buildPhases = (
+				F37CCC079B1556FA5E31EBA1 /* [CP] Check Pods Manifest.lock */,
 				4A26D0592CE4FA19001D5703 /* Sources */,
 				4A26D05A2CE4FA19001D5703 /* Frameworks */,
 				4A26D05B2CE4FA19001D5703 /* Resources */,
+				C1440A60AEBEE56CA3048B54 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,8 +219,6 @@
 				4A26D0602CE4FA19001D5703 /* WhatsAppCloneUITests */,
 			);
 			name = WhatsAppCloneUITests;
-			packageProductDependencies = (
-			);
 			productName = WhatsAppCloneUITests;
 			productReference = 4A26D05D2CE4FA19001D5703 /* WhatsAppCloneUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -244,6 +291,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		68D75182D51BF8AC666181F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhatsAppCloneTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B67865C3519B02CDF307192C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhatsAppClone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1440A60AEBEE56CA3048B54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhatsAppClone-WhatsAppCloneUITests/Pods-WhatsAppClone-WhatsAppCloneUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhatsAppClone-WhatsAppCloneUITests/Pods-WhatsAppClone-WhatsAppCloneUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WhatsAppClone-WhatsAppCloneUITests/Pods-WhatsAppClone-WhatsAppCloneUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9C034E475258F9D860C3ADE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhatsAppClone/Pods-WhatsAppClone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhatsAppClone/Pods-WhatsAppClone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WhatsAppClone/Pods-WhatsAppClone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F37CCC079B1556FA5E31EBA1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhatsAppClone-WhatsAppCloneUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4A26D0392CE4FA17001D5703 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -284,6 +434,7 @@
 /* Begin XCBuildConfiguration section */
 		4A26D0672CE4FA19001D5703 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B98F2F11EB0B6890EB1A6171 /* Pods-WhatsAppClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +463,7 @@
 		};
 		4A26D0682CE4FA19001D5703 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D94DA8B8907480C9A32078AE /* Pods-WhatsAppClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -459,6 +611,7 @@
 		};
 		4A26D06C2CE4FA19001D5703 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFE52D27FD3A2347F73907C8 /* Pods-WhatsAppCloneTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -478,6 +631,7 @@
 		};
 		4A26D06D2CE4FA19001D5703 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3713CD5DA7B859808B2A3B1B /* Pods-WhatsAppCloneTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -497,6 +651,7 @@
 		};
 		4A26D06F2CE4FA19001D5703 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C69C0D4EE9DE25D72DCF0E88 /* Pods-WhatsAppClone-WhatsAppCloneUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -514,6 +669,7 @@
 		};
 		4A26D0702CE4FA19001D5703 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE680AF68989991CB657583C /* Pods-WhatsAppClone-WhatsAppCloneUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
