@@ -21,5 +21,11 @@
 			</array>
 		</dict>
 	</dict>
+  <key>NSCameraUsageDescription</key>
+  <string>$(PRODUCT_NAME) would you like to use your camera</string>
+  <key>NSPhotoLibraryUsageDescription</key>
+  <string>$(PRODUCT_NAME) would you like to use your camera</string>
+  <key>NSMicrophoneUsageDescription</key>
+  <string>$(PRODUCT_NAME) would you like to use your camera</string>
 </dict>
 </plist>

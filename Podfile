@@ -14,8 +14,13 @@ pod 'FirebaseAnalytics'
 
 # Add the pods for any other Firebase products you want to use in your app
 # For example, to use Firebase Authentication and Cloud Firestore
+pod 'Firebase'
 pod 'FirebaseAuth'
 pod 'FirebaseFirestore'
+pod 'ProgressHUD'
+pod 'RealmSwift'
+pod 'Firebase/Storage'
+pod 'YPImagePicker'
 
   target 'WhatsAppCloneTests' do
     inherit! :search_paths
