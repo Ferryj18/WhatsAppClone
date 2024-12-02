@@ -14,7 +14,7 @@ class StartChatHelper{
   // MARK: - Start Chat
   func startChat(user1: User, user2: User) -> String {
     let chatRoomId = getChatRoomId(user1Id: user1.id, user2Id: user2.id)
-    print("creating char room id\(chatRoomId)")
+    
     // create recent items
     createRecentChatItems(chatRoomId: chatRoomId, users: [user1, user2])
     
@@ -28,6 +28,13 @@ class StartChatHelper{
     
     return chatRoomId
   }
+  func restartChat(chatRoomId: String, memberIds: [String]) {
+       FirebaseUserListener.shared.downloadUsersFromFirestore(withIds: memberIds) { users in
+           if users.count > 0 {
+               StartChatHelper.shared.createRecentChatItems(chatRoomId: chatRoomId, users: users)
+           }
+       }
+   }
   func createRecentChatItems(chatRoomId: String, users: [User]) {
     guard !users.isEmpty else { return }
     
@@ -45,7 +52,7 @@ class StartChatHelper{
       guard let currentUser = User.currentUser else { return }
       
       for id in memberIdsToCreateRecentChat {
-        print("creating char room id\(chatRoomId)")
+     
         
         let senderUser = id == currentUser.id ? currentUser : self.getReceiverUser(users: users)
         

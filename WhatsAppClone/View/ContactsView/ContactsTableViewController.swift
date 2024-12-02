@@ -49,6 +49,24 @@ class ContactsTableViewController: UITableViewController {
               let user = searchController.isActive ? filteredUsers[indexPath.row] : allUsers[indexPath.row]
               navigateToProfileScreen(user)
   }
+  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+          if editingStyle == .delete {
+              // Hapus data dari array
+            allUsers.remove(at: indexPath.row)
+              // Hapus baris dari tabel dengan animasi
+              tableView.deleteRows(at: [indexPath], with: .fade)
+          }
+      }
+  override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+      let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completionHandler) in
+          // Hapus data
+        self.allUsers.remove(at: indexPath.row)
+          self.tableView.deleteRows(at: [indexPath], with: .fade)
+          completionHandler(true)
+      }
+      
+      return UISwipeActionsConfiguration(actions: [deleteAction])
+  }
   //  setup UI
   private func setupSearchBar() {
     navigationItem.searchController = searchController
@@ -90,11 +108,10 @@ class ContactsTableViewController: UITableViewController {
   // MARK: - Navigation
      private func navigateToProfileScreen(_ user: User) {
        let profileView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileView") as! ProfileTableViewController
-       profileView.user = user
-       self.navigationController?.pushViewController(profileView, animated: true)
+    
 //         let profileView = ProfileViewController()
-//         profileView.viewModel = ProfileUIViewModel(user: user)
-//         self.navigationController?.pushViewController(profileView, animated: true)
+         profileView.viewModel = ProfileViewModel(user: user)
+         self.navigationController?.pushViewController(profileView, animated: true)
      }
  }
      

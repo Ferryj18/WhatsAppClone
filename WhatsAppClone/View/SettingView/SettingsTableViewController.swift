@@ -21,7 +21,6 @@ class SettingsTableViewController: UITableViewController{
   // Mark: - Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    imgAvatar.layer.cornerRadius = imgAvatar.frame.width / 2
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -60,7 +59,7 @@ class SettingsTableViewController: UITableViewController{
       if user.avatar != "" {
         if let avatar = User.currentUser?.avatar{
           FirebaseStorageHelper.downloadImage(url: avatar){ image in
-            self.imgAvatar.image = image
+            self.imgAvatar.image = image?.circleMasked
           }
           
         }

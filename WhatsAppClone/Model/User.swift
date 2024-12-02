@@ -51,31 +51,31 @@ func saveUserLocally(_ user: User) {
         print("Failed to encode userObject", error.localizedDescription)
     }
 }
-func createDummyUsers() {
-    print("Creating dummy users...")
-    
-    let names = ["Aji", "Beni", "Robert", "Jay", "Calvin"]
-    
-    var imageIdx = 1
-    var userIdx = 1
-    
-    for i in 0..<5 {
-        let id = UUID().uuidString
-        
-        let fileDirectory = "Avatars/" + "_\(id)" + ".jpg"
-        
-        let image = UIImage(named: "user\(imageIdx)")!
-        
-        FirebaseStorageHelper.uploadImage(image, directory: fileDirectory) { imageLink in
-            let user = User(id: id, username: names[i], status: "Available", email: "user\(userIdx)@mail.com", avatar: imageLink ?? "")
-            
-            userIdx += 1
-            FirebaseUserListener.shared.saveUserToFirestore(user)
-        }
-        
-        imageIdx += 1
-        if imageIdx == 5 {
-            imageIdx = 1
-        }
-    }
-}
+//func createDummyUsers() {
+//    print("Creating dummy users...")
+//    
+//    let names = ["Aji", "Beni", "Robert", "Jay", "Calvin"]
+//    
+//    var imageIdx = 1
+//    var userIdx = 1
+//    
+//    for i in 0..<5 {
+//        let id = UUID().uuidString
+//        
+//        let fileDirectory = "Avatars/" + "_\(id)" + ".jpg"
+//        
+//        let image = UIImage(named: "user\(imageIdx)")!
+//        
+//        FirebaseStorageHelper.uploadImage(image, directory: fileDirectory) { imageLink in
+//            let user = User(id: id, username: names[i], status: "Available", email: "user\(userIdx)@mail.com", avatar: imageLink ?? "")
+//            
+//            userIdx += 1
+//            FirebaseUserListener.shared.saveUserToFirestore(user)
+//        }
+//        
+//        imageIdx += 1
+//        if imageIdx == 5 {
+//            imageIdx = 1
+//        }
+//    }
+//}

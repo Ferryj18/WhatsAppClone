@@ -21,6 +21,13 @@ pod 'ProgressHUD'
 pod 'RealmSwift'
 pod 'Firebase/Storage'
 pod 'YPImagePicker'
+pod 'MessageKit'
+pod 'InputBarAccessoryView'
+pod 'SKPhotoBrowser'
+pod 'Firebase/Messaging'
+pod 'Firebase/Core'
+pod 'Firebase/Analytics'
+
 
   target 'WhatsAppCloneTests' do
     inherit! :search_paths

@@ -12,6 +12,39 @@ class FirebaseRecentChatListener {
   
   private init() {}
   
+  
+  // MARK: - Download Recent Chats
+  func downloadRecentChatsFromFirestore(completion: @escaping (_ recentChats: [RecentChat]) -> Void) {
+    FirebaseReference(.Recent).whereField(kSenderId, isEqualTo: User.currentID).addSnapshotListener { snapshot, error in
+      var recentChats: [RecentChat] = []
+      
+      guard let documents = snapshot?.documents else {
+        print("No documents")
+        completion(recentChats)
+        return
+      }
+      
+      let allRecentChats = documents.compactMap { document in
+        return try? document.data(as: RecentChat.self)
+      }
+      
+      for recent in allRecentChats {
+        if !recent.lastMessage.isEmpty {
+          recentChats.append(recent)
+        }
+      }
+      
+      completion(recentChats)
+    }
+  }
+  func clearUnreadCounter(recentChat: RecentChat) {
+    var newRecentChat = recentChat
+    newRecentChat.unreadCounter = 0
+    self.saveRecentChat(newRecentChat)
+  }
+  func delete(recentChat: RecentChat) {
+    FirebaseReference(.Recent).document(recentChat.id).delete()
+  }
   func saveRecentChat(_ recentChat: RecentChat) {
     do {
       try FirebaseReference(.Recent).document(recentChat.id).setData(from: recentChat)
@@ -19,37 +52,51 @@ class FirebaseRecentChatListener {
       print("Error save recent chat ", error.localizedDescription)
     }
   }
-  // MARK: - Download Recent Chats
-     func downloadRecentChatsFromFirestore(completion: @escaping (_ recentChats: [RecentChat]) -> Void) {
-         FirebaseReference(.Recent).whereField(kSenderId, isEqualTo: User.currentID).addSnapshotListener { snapshot, error in
-             var recentChats: [RecentChat] = []
-             
+  func updateRecentChat(chatRoomId: String, lastMessage: String) {
+    FirebaseReference(.Recent).whereField(kChatRoomId, isEqualTo: chatRoomId).getDocuments { snapshot, error in
+      guard let documents = snapshot?.documents else {
+        print("No Documents Found")
+        return
+        
+      }
+        let allRecents = documents.compactMap { snapshot in
+          return try? snapshot.data(as: RecentChat.self)
+        }
+  
+        for recent in allRecents {
+          // Update Last Message
+          self.updateRecentWithNewMessage(recent: recent, lastMessage: lastMessage)
+        }
+      }
+    }
+  // MARK: - update unread counter
+     func resetRecentChatCounter(chatRoomId: String) {
+         FirebaseReference(.Recent).whereField(kChatRoomId, isEqualTo: chatRoomId).whereField(kSenderId, isEqualTo: User.currentID).getDocuments { snapshot, error in
              guard let documents = snapshot?.documents else {
-                 print("No documents")
-                 completion(recentChats)
+                 print("No Documents Found")
                  return
              }
              
-             let allRecentChats = documents.compactMap { document in
-                 return try? document.data(as: RecentChat.self)
+             let allRecents = documents.compactMap { snapshot in
+                 return try? snapshot.data(as: RecentChat.self)
              }
              
-             for recent in allRecentChats {
-                 if !recent.lastMessage.isEmpty {
-                     recentChats.append(recent)
-                 }
+             if allRecents.count > 0 {
+                 self.clearUnreadCounter(recentChat: allRecents.first!)
              }
-             
-             completion(recentChats)
          }
      }
-  func clearUnreadCounter(recentChat: RecentChat) {
-          var newRecentChat = recentChat
-          newRecentChat.unreadCounter = 0
-          self.saveRecentChat(newRecentChat)
+    private func updateRecentWithNewMessage(recent: RecentChat, lastMessage: String) {
+      var tempRecent = recent
+  
+      if tempRecent.senderId != User.currentID {
+        tempRecent.unreadCounter += 1
       }
-  func delete(recentChat: RecentChat) {
-        FirebaseReference(.Recent).document(recentChat.id).delete()
+  
+      tempRecent.lastMessage = lastMessage
+      tempRecent.date = Date()
+  
+      self.saveRecentChat(tempRecent)
     }
-}
+  }
   

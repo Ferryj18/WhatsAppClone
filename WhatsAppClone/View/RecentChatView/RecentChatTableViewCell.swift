@@ -19,7 +19,7 @@ class RecentChatTableViewCell: UITableViewCell {
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    imgAvatarRecentChat.layer.cornerRadius = imgAvatarRecentChat.frame.width / 2
+ 
     vwUnreadCounter.layer.cornerRadius = vwUnreadCounter.frame.width / 2
   }
   
@@ -63,7 +63,7 @@ class RecentChatTableViewCell: UITableViewCell {
     guard avatar != "" else { return }
     
     FirebaseStorageHelper.downloadImage(url: avatar) { image in
-      self.imgAvatarRecentChat.image = image
+      self.imgAvatarRecentChat.image = image?.circleMasked
     }
   }
 }
